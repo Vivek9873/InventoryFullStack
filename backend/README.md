@@ -72,7 +72,7 @@ npm run dev # Runs the server in development mode (with TypeScript)
 npm run build # Builds the TypeScript files
 npm start # Runs the compiled JS files
 
-Option 2: Using Docker (optional)
+Option 2: Using Docker
 docker-compose up --build
 
 Backend will be available at: http://localhost:5000
