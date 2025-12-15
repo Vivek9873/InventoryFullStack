@@ -50,8 +50,8 @@ const registerUser= async(req:Request,res:Response)=>{
         const token = jwt.sign({userId:newUser._id},JWT_SECURITY_KEY,{expiresIn:"30m"});
         res.cookie("token",token,{
             httpOnly:true,
-            sameSite:"lax",
-            secure:false,
+            sameSite:"none",
+            secure:true,
             maxAge: 7 * 24 * 60 * 60 * 1000,
         })
         res.status(200).json({
@@ -108,8 +108,8 @@ const loginUser = async(req:Request,res:Response)=>{
         const token = jwt.sign({userId:getUser._id},JWT_SECURITY_KEY,{expiresIn:"30m"});
         res.cookie("token",token,{
             httpOnly:true,
-            secure:false,
-            sameSite: "lax",
+            secure:true,
+            sameSite: "none",
             maxAge: 7 * 24 * 60 * 60 * 1000,
         })
         res.status(200).json({
