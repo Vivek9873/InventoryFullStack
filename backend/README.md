@@ -1,5 +1,8 @@
 # Inventory Management Backend
 
+## Deployment
+https://inventory-full-stack-wyon.vercel.app
+
 ## Overview
 
 This is a **Backend API for an Inventory Management System**, built using **Node.js, Express, MongoDB, and TypeScript**.  
